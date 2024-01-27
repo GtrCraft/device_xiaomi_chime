@@ -67,17 +67,19 @@ persist.vendor.ssr.enable_ramdumps=1
 
 # Surfaceflinger
 debug.sf.latch_unsignaled=0
-debug.sf.disable_backpressure=1
+debug.sf.enable_gl_backpressure=1
 debug.sf.enable_transaction_tracing=false
 debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.high_fps_early_gl_phase_offset_ns=-2000000
-debug.sf.high_fps_early_phase_offset_ns=-5000000
+debug.sf.high_fps_early_phase_offset_ns=-4000000
 debug.sf.high_fps_late_app_phase_offset_ns=1000000
 debug.sf.high_fps_late_sf_phase_offset_ns=-2000000
 debug.sf.hw=0
 debug.sf.enable_hwc_vds=0
+debug.sf.predict_hwc_composition_strategy=0
 persist.sys.sf.color_mode=0
 persist.sys.sf.color_saturation=1.0
+ro.surface_flinger.enable_layer_caching=true
 ro.surface_flinger.protected_contents=true
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.has_HDR_display=false
@@ -88,6 +90,8 @@ ro.surface_flinger.use_color_management=true
 ro.surface_flinger.set_idle_timer_ms=80
 ro.surface_flinger.set_touch_timer_ms=200
 ro.surface_flinger.set_display_power_timer_ms=1000
+ro.surface_flinger.vsync_event_phase_offset_ns=2000000
+ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 ro.surface_flinger.wcg_composition_dataspace=143261696
 
 # Time-services
